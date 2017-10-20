@@ -6,10 +6,10 @@
 </head>
 <body>
 <?php
-print$_POST['age']
-print$_POST['gakureki']
-print$_POST['zangyou']
-print$_POST['suimin']
+print$_POST['age'];
+print$_POST['gakureki'];
+print$_POST['zangyou'];
+print$_POST['suimin'];
 ?>
 </form>
 </body>
