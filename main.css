@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css)
+	;
+
+/** 共通 */
+BODY {
+	background-image: url("1.jpg"); /* 全体の背景画像 */
+	background-repeat: no-repeat; /* 背景を繰り返さない */
+	background-position: 50% 50%; /* 背景画像の位置は画面中央 */
+	background-attachment: fixed; /* 背景画像を固定する */
+	font-family: "Rounded Mplus 1c";
+	color: white;
+	font-size: 150%;
+}
+
+/** テキストボックス*/
+input[type="text"] {
+	background-color: transparent;
+	border: medium #c0c0c0 single;
+	color: white;
+	width: 10%;
+	height: 5%;
+	font-size: 100%;
+}
+
+/** ボタン */
+.button {
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	line-height: 50px;
+	width: 25%;
+	height:8%;
+	font-size:20px
+}
+
+.button:hover {
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.button_top {
+	text-align: center;
+	position: relative;
+	top: 35%;
+}
+
+/** TOP画面 */
+/** 画像 */
+.top_logo {
+	position: relative;
+	top: 25%;
+	text-align: center;
+}
+
+/** 質問 */
+.question{
+	position: relative;
+	top: 30%;
+	text-align: center;
+}
+
+/** 回答入力フォーム */
+.input{
+	position: relative;
+	top: 40%;
+	text-align: center;
+}
+
+/** 次へボタン */
+.next_button{
+	position: relative;
+	top: 50%;
+	text-align: center;
+}
+

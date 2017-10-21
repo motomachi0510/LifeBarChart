@@ -5,13 +5,30 @@
 <title>test2</title>
 </head>
 <body>
-あいおうえ
 <?php
-print('おはよう');
-print($_POST['age']);
-print($_POST['gakureki']);
-print($_POST['zangyou']);
-print($_POST['suimin']);
+print'おはよう';
+print$_POST['age'];
+
+$dsn = 'mysql:dbname=testdb;host=localhost';
+$user = 'root';
+$password = '';
+
+try{
+    $dbh = new PDO($dsn, $user, $password);
+
+    $sql = 'select * from testtable';
+    foreach ($dbh->query($sql) as $row) {
+        print($row['age'].',');
+        print($row['gakureki']);
+        print('<br />');
+    }
+}catch (PDOException $e){
+    print('Error:'.$e->getMessage());
+    die();
+}
+
+$dbh = null;
+
 ?>
 </body>
 </html>
