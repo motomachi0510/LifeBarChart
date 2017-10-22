@@ -6,24 +6,27 @@
 <title>人生棒グラフ</title>
 </head>
 <body>
-	<div class="question" >
-		Q3.1日の平均残業時間を教えてください。
-	</div>
-
-	<div class="input">
-		<input name="overtime" type="text" > 時間 <br>
-	</div>
-
-	<div class="next_button">
-		<form method="post" action="commuteTime.php">
-			<input type="submit" class="button" value="次へ">
-		</form>
-	</div>
+<?php
+session_start();
+print $_POST['profession'];
+$_SESSION['userData']['profession'] = $_POST['profession'];
+?>
 <!-- デバッグ用 -->
 <?php
 echo "{$_SESSION['userData']['age']}";
 echo "{$_SESSION['userData']['profession']}";
 echo "{$_SESSION['userData']['overtime']}";
+echo "{$_SESSION['userData']['commuteTime']}";
 echo "{$_SESSION['userData']['sleepTime']}";
-?>ody>
+?>
+	<form method="post" action="commuteTime.php">
+		<div class="question">Q3.1日の平均残業時間を教えてください。</div>
+		<div class="input">
+			<input name="overtime" type="text"> 時間 <br>
+		</div>
+		<div class="next_button">
+			<input type="submit" class="button" value="次へ">
+		</div>
+	</form>
+</body>
 </html>

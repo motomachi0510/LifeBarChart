@@ -6,11 +6,17 @@
 <title>人生棒グラフ</title>
 </head>
 <body>
+<?php
+session_start();
+print $_POST['sleepTime'];
+$_SESSION['userData']['sleepTime'] = $_POST['sleepTime'];
+?>
 <!-- デバッグ用 -->
 <?php
 echo "{$_SESSION['userData']['age']}";
 echo "{$_SESSION['userData']['profession']}";
 echo "{$_SESSION['userData']['overtime']}";
+echo "{$_SESSION['userData']['commuteTime']}";
 echo "{$_SESSION['userData']['sleepTime']}";
 ?>
 </body>
