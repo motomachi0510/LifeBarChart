@@ -19,6 +19,11 @@
 			<input type="submit" class="button" value="次へ">
 		</form>
 	</div>
-
-</body>
+<!-- デバッグ用 -->
+<?php
+echo "{$_SESSION['userData']['age']}";
+echo "{$_SESSION['userData']['profession']}";
+echo "{$_SESSION['userData']['overtime']}";
+echo "{$_SESSION['userData']['sleepTime']}";
+?>ody>
 </html>
