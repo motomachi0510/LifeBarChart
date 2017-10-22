@@ -8,6 +8,9 @@
 <body>
 <?php
 session_start();
+header('Expires:-1');
+header('Cache-Control:');
+header('Pragma:');
 print $_POST['overtime'];
 $_SESSION['userData']['overtime'] = $_POST['overtime'];
 ?>
@@ -26,6 +29,7 @@ echo "{$_SESSION['userData']['sleepTime']}";
 		</div>
 
 		<div class="next_button">
+			<input type="button" class="button" value="戻る" onClick="history.back()">
 			<input type="submit" class="button" value="次へ">
 		</div>
 	</form>

@@ -4,10 +4,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="main.css">
 <title>人生棒グラフ</title>
+<script type="text/javascript">
+<!--
+function next(){
+	var
+}
+-->
+</script>
 </head>
 <body>
 <?php
 session_start();
+header('Expires:-1');
+header('Cache-Control:');
+header('Pragma:');
 // ユーザーデータの初期化
 $_SESSION['userData'] = array(
     'age' => '0',
@@ -27,13 +37,13 @@ echo "{$_SESSION['userData']['sleepTime']}";
 ?>
 
 <form method="post" action="profession.php">
-
 		<div class="question">Q1.まずはあなたの年齢を教えてください。</div>
 
 		<div class="input">
 			<input name="age" type="text" class=""> 歳 <br>
 		</div>
 		<div class="next_button">
+			<input type="submit" class="button" value="戻る">
 			<input type="submit" class="button" value="次へ">
 		</div>
 	</form>
