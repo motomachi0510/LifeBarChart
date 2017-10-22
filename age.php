@@ -38,6 +38,7 @@ echo "{$_SESSION['userData']['age']}";
 echo "{$_SESSION['userData']['profession']}";
 echo "{$_SESSION['userData']['overtime']}";
 echo "{$_SESSION['userData']['sleepTime']}";
+print('セッションIDは '.$_COOKIE["PHPSESSID"].' です。');
 ?>
 
 </body>
